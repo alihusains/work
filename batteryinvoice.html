@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Poppins;
+              font-weight: 400;
+        }
+
+        body {
+            margin: 0;
+            padding: 0; }
+            
+            
+            .custom-arrow-image {
+    width: 24px; /* Set your preferred width */
+    height: 24px; /* Set your preferred height */
+    /* Add any additional styling as needed */
+}
+
+
+        .frame-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 10% auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 2px 14px rgba(117, 125, 138, 0.14);
+            flex-direction: column;
+            gap: 20px;
+            display: flex;
+            border-radius: 15px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1.5px;
+            background-color: #EFEFF0;
+            margin: 20px 0;
+        }
+
+        .header {
+            align-self: stretch;
+            margin: 20px 5px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 20px;
+            display: flex;
+        }
+
+        .dark-icons {
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            display: flex;
+        }
+
+        .vector {
+            width: 17.45px;
+            height: 12px;
+            background: #323E48;
+        }
+
+        .thankyou {
+            margin: 20px 10px;
+            text-align: center;
+        }
+
+        .total-info {
+            flex: 1 1 0;
+            text-align: right;
+        }
+
+        .info-label,
+        .info-value,
+        .info-date {
+            color: #7E878E;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        .info-value {
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 600px) {
+            .frame-container {
+                padding: 10px;
+            }
+
+            .header {
+                gap: 10px;
+            }
+
+            .dark-icons {
+                gap: 4px;
+            }
+
+            .vector {
+                width: 10px;
+                height: 7px;
+            }
+        }
+
+        .order-summary {
+            align-self: stretch;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 24px;
+        }
+.greylink{
+
+color: #757D8A; text-decoration: none;
+
+}
+
+        .margin20 {
+            margin: 20px;
+        }
+
+        .summary-title {
+            align-self: stretch;
+            height: 30px;
+            color: #323E48;
+            font-size: 20px;
+            font-family: Poppins;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .summary-item {
+            align-self: stretch;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .item-label {
+            color: #7E878E;
+            font-size: 14px;
+            font-family: Poppins;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .item-value {
+            flex: 1 1 0;
+            text-align: right;
+            color: #323E48;
+            font-size: 14px;
+            font-family: Poppins;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .a22 {
+            font-size: 16px;
+            font-family: Poppins;
+        }
+        
+        .left{
+        text-align:left;
+        font-size:37px;
+         word-wrap: break-word;
+        }
+
+        .checkout-container {
+            align-self: stretch;
+            padding: 32px;
+            background: #F7F7F8;
+            border-radius: 16px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 32px;
+            display: flex;
+        }
+
+        .total-container {
+            align-self: stretch;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 24px;
+            display: flex;
+        }
+
+        .total-label,
+        .fee-label {
+            flex: 1 1 0;
+            color: #323E48;
+            font-size: 20px;
+            font-family: Poppins;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .total-value {
+            text-align: right;
+            color: #323E48;
+            font-size: 20px;
+            font-family: Poppins;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .dividerwhite {
+            align-self: stretch;
+            height: 0px;
+            border: 1.5px white solid;
+        }
+
+        .order-review {
+            align-self: stretch;
+            height: 111px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 24px;
+            display: flex;
+        }
+
+        .teal {
+            color: #4FC4CD;
+             font-weight: 600; word-wrap: break-word;
+              font-family: Poppins;
+        }
+
+        .support-container {
+            width: auto;
+            margin: -20px;
+            height: 72px;
+            padding: 24px 40px;
+            background: #323E48;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 0px 0px 15px 15px;
+            display: inline-flex;
+        }
+
+        .support-content {
+            flex: 1 1 0;
+            height: 21px;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 16px;
+            display: flex;
+        }
+
+        .support-text {
+            justify-content: flex-start;
+            align-items: center;
+            gap: 8px;
+            display: flex;
+        }
+
+        .question,
+        .contact {
+            color: #EFEFF0;
+            font-size: 14px;
+            font-family: Poppins;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .contact {
+            color: white;
+            font-weight: 600;
+        }
+
+        .arrow-container {
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            display: flex;
+        }
+
+        .arrow-diagram {
+            width: 24px;
+            height: 24px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .arrow-group {
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+
+        .arrow-path {
+            width: 4px;
+            height: 8px;
+            left: 10px;
+            top: 8px;
+            position: absolute;
+            border: 1.5px #EFEFF0 solid;
+        }
+
+        .arrow-body {
+            width: 24px;
+            height: 24px;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+        }
+
+        .company-info {
+            max-width: 612px;
+            height: 108px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .company-name {
+            color: #323E48;
+            font-size: 14px;
+            font-family: Poppins;
+            font-weight: 600;
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        .company-address,
+        .company-contact,
+        .company-trn {
+            color: #757D8A;
+            font-size: 14px;
+            font-family: Poppins;
+            font-weight: 400;
+            text-align: center;
+            word-wrap: break-word;
+            
+        }
+    </style>
+</head>
+<body>
+
+<div class="frame-container">
+    <div class="header margin20">
+        <div class="dark-icons">
+            <div class="vector"></div>
+            <div class="vector"></div>
+            <div class="vector"></div>
+            <div class="vector"></div>
+        </div>
+        <div class="total-info">
+            <span class="info-label">Total </span>
+            <span class="info-value">AED 500.00<br /></span>
+            <span class="info-date">December 2, 2023</span>
+        </div>
+    </div>
+
+    <div class="thankyou left">
+         <span
+            style="font-size: 37px;" class="teal">Thank
+            you </span>
+        <span style="color: #323E48; font-size: 37px; font-family: Poppins; font-weight: 600; word-wrap: break-word">
+            for your ${service} order!</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="order-summary margin20">
+        <div class="summary-title">
+            Summary
+        </div>
+        <div class="summary-item">
+            <div class="item-label">When?</div>
+            <div class="item-value">December 2, 4:37 PM</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">Order number</div>
+            <div class="item-value">#12345</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">Vehicle</div>
+            <div class="item-value">Nissan Patrol A 12345</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">Pilot feedback</div>
+            <div class="item-value">Consider changing oil too, more than 10,000 km have passed</div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="order-summary margin20">
+        <div class="summary-title">
+            ${service}
+        </div>
+        <div class="summary-item">
+            <div class="item-label">Previous battery health</div>
+            <div class="item-value">Previous battery</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">Previous battery</div>
+            <div class="item-value">#12345</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">New battery</div>
+            <div class="item-value">Nissan Patrol A 12345</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">New battery warranty</div>
+            <div class="item-value">Consider changing oil too, more than 10,000 km have passed</div>
+        </div>
+    </div>
+
+    <div class="margin20"></div>
+
+       <div class="checkout-container margin20">
+        <div class="total-container">
+            <div class="total-label">Total</div>
+            <div class="total-value">AED 500.00</div>
+        </div>
+        <div class="dividerwhite"></div>
+
+        <div class="summary-item">
+            <div class="item-label">Delivery fee</div>
+            <div class="item-value">Free</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">Bosch Mega 1000</div>
+            <div class="item-value">600.00</div>
+        </div>
+        <div class="summary-item">
+            <div class="item-label">Send a battery technician</div>
+            <div class="item-value">- 100.00</div>
+        </div>
+
+        <div class="dividerwhite"></div>
+
+ <div class="summary-item">
+            <div class="item-label a22">Paid</div>
+            <div class="item-value a22">500.00</div>
+            
+        </div>
+        
+        <div class="vat-container" style="padding:0px;margin-bottom:0px;">
+        
+        <div class="item-label a22">Inclusive of VAT at 5% AED 30.00</div>
+            <div class="item-label a22">Initial hold AED 100.00 has been charged. <span class="teal"><b>Learn more</b></span></div>
+        
+        </div>
+    </div>
+
+    <div class="support-container">
+        <div class="support-content">
+            <div class="support-text">
+                <span class="question">Have a question?</span>
+                <span class="contact">Contact support</span>
+            </div>
+        </div>
+        
+        
+    <div class="arrow-container">
+    <img src="https://i.imgur.com/B8PDStY.png" alt="Arrow Image" class="custom-arrow-image">
+</div>
+
+       
+        
+    </div>
+</div>
+<div class="company-info" style="width: 100%;
+            max-width: 700px;
+            margin: 10% auto;
+            padding: 20px;" >
+    <div class="company-name"
+        style="color: #323E48; font-size: 14px; font-family: Poppins; font-weight: 600; word-wrap: break-word;">CAFU APP
+        Technologies FZE</div>
+    <div class="company-address">STRI
+        Park, P.O.Box 95502, Sharjah, UAE</div>
+    <div class="company-contact"
+       ><a href="https://www.cafu.com" style="color: #757D8A; text-decoration: none;">www.cafu.com</a> • <a href="tel:800692238" class="greylink"> 800 MYCAFU (800-692238)</a></div>
+       
+    <div class="company-trn">TRN
+        number: 1228647710</div>
+</div>
+
+
+
+</body>
+</html>
